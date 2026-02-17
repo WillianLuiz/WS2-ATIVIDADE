@@ -1,0 +1,25 @@
+name: CI - Atividade SPONDEO
+
+on:
+  push:
+    branches: 
+      - main
+  workflow_dispatch: 
+jobs:
+  testes:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Baixar o código do repositório
+      uses: actions/checkout@v4
+
+    - name: Configurar o Java (JDK 21)
+      uses: actions/setup-java@v4
+      with:
+        java-version: '21'
+        distribution: 'adopt'
+        cache: maven
+        
+    - name: Rodando Testes Unitários
+      working-directory: .
+      run: mvn clean test
