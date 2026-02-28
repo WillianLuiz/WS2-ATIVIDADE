@@ -35,4 +35,4 @@ Desenvolvido para o Workshop de Automação de Pipelines por:
 * Raphael Muniz
 * Ygor Marangoni
 
-Boa sorte!
+Boa sorte! 
