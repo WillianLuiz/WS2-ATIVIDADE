@@ -60,8 +60,8 @@ class VagaServiceTest {
 
     private Vaga criarVagaEntidade() {
         Vaga vaga = new Vaga();
-        vaga.setId("uuid-123");
-        vaga.setCodigoVaga("12345");
+        vaga.setId("uuid-999");
+        vaga.setCodigoVaga("99999");
         vaga.setTitulo("Desenvolvedor Java");
         vaga.setEmpresa("Empresa Tech");
         vaga.setSalario("R$ 10.000");
@@ -71,7 +71,7 @@ class VagaServiceTest {
         vaga.setRegime("CLT");
         vaga.setLinkCandidatura("https://empresa.com/vaga/123");
         vaga.setModalidade("Híbrido");
-        vaga.setFonte("LinkedIn");
+        vaga.setFonte("Gupy");
         return vaga;
     }
 
@@ -166,7 +166,7 @@ class VagaServiceTest {
         @DisplayName("Deve retornar DTO quando ID existe")
         void deveRetornarVagaPorId() {
             // Given
-            String id = "uuid-123";
+            String id = "uuid-999";
             Vaga vaga = criarVagaEntidade();
             when(repository.findById(id)).thenReturn(Optional.of(vaga));
 
