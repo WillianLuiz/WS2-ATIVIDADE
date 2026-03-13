@@ -152,7 +152,7 @@ class VagaServiceTest {
             service.salvarVarias(lista);
 
             // Then
-            verify(repository, times(2)).findByFonteAndCodigoVaga(anyString(), anyString());
+            verify(repository, times(3)).findByFonteAndCodigoVaga(anyString(), anyString());
 
             verify(repository, times(3)).save(any(Vaga.class));
         }
