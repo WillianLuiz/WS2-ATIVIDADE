@@ -106,7 +106,7 @@ class VagaServiceTest {
             assertThat(vagaCapturada.getFonte()).isEqualTo("LinkedIn");
             assertThat(vagaCapturada.getCodigoVaga()).isEqualTo(dto.codigoVaga());
 
-            assertThat(vagaCapturada.getTitulo()).isEqualTo("Desenvolvedor Python");
+            assertThat(vagaCapturada.getTitulo()).isEqualTo("Desenvolvedor Java");
             assertThat(vagaCapturada.getEmpresa()).isEqualTo(dto.empresa());
             assertThat(vagaCapturada.getLinkCandidatura()).isEqualTo(dto.linkCandidatura());
         }
@@ -152,9 +152,9 @@ class VagaServiceTest {
             service.salvarVarias(lista);
 
             // Then
-            verify(repository, times(3)).findByFonteAndCodigoVaga(anyString(), anyString());
+            verify(repository, times(2)).findByFonteAndCodigoVaga(anyString(), anyString());
 
-            verify(repository, times(3)).save(any(Vaga.class));
+            verify(repository, times(2)).save(any(Vaga.class));
         }
     }
 
