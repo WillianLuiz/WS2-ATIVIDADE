@@ -103,7 +103,7 @@ class VagaServiceTest {
 
             Vaga vagaCapturada = vagaCaptor.getValue();
 
-            assertThat(vagaCapturada.getFonte()).isEqualTo("Gupy");
+            assertThat(vagaCapturada.getFonte()).isEqualTo("LinkedIn");
             assertThat(vagaCapturada.getCodigoVaga()).isEqualTo(dto.codigoVaga());
 
             assertThat(vagaCapturada.getTitulo()).isEqualTo("Desenvolvedor Python");
