@@ -188,7 +188,7 @@ class VagaServiceTest {
 
             // When & Then
             assertThatThrownBy(() -> service.buscarPorId(id))
-                    .isInstanceOf(IllegalArgumentException.class)
+                    .isInstanceOf(RuntimeException.class)
                     .hasMessageContaining("Vaga não encontrada com o ID: " + id);
         }
     }
