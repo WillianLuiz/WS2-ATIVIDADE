@@ -125,7 +125,7 @@ class VagaServiceTest {
             VagaResponseDTO result = service.salvar(dto);
 
             // Then
-            assertThat(result).isNull();
+            assertThat(result).isNotNull();
             assertThat(result.id()).isEqualTo(vagaExistente.getId());
 
             verify(repository, times(1)).save(any(Vaga.class));
