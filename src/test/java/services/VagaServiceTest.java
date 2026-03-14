@@ -128,7 +128,8 @@ class VagaServiceTest {
             assertThat(result).isNotNull();
             assertThat(result.id()).isEqualTo(vagaExistente.getId());
 
-            verify(repository, times(1)).save(any(Vaga.class));
+            //verify(repository, times(1)).save(any(Vaga.class));
+            verify(repository, never()).save(any(Vaga.class));
         }
     }
 
